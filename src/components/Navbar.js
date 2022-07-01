@@ -25,7 +25,7 @@ const Navbar = ({ toggle }) => {
 };
 
 const Nav = styled.nav`
-  background: #000;
+  background-color: black;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ const NavLink = styled(Link)`
     transition: 0.2s ease-in-out;
   }
 `;
-const NavLogo = styled(Link)`
+export const NavLogo = styled(Link)`
   color: #fff;
   display: flex;
   align-items: center;
