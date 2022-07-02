@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import heroImg from "../images/heroImg.png";
+import heroImg from "../images/heroImg1.png";
+import bg from "../images/bg.jpg";
 import { Link } from "react-router-dom";
 import componentVid from "../videos/componentVid.mp4";
 import { NavLogo } from "../components/Navbar";
@@ -9,64 +10,84 @@ import { RiCopyrightLine } from "react-icons/ri";
 const Landing = () => {
   return (
     <>
-      <Hero>
-        <HeroText>
-          <HeroMain>Connect anywhere, anytime</HeroMain>
-          <HeroSec>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
-            tempora nam deserunt eos, eveniet temporibus. Hic labore officia
-            consectetur quo aliquam culpa voluptatibus dolorem ut perferendis
-            doloremque ratione, eveniet reprehenderit?
-          </HeroSec>
-          <BtnLink to="/signin-up">Try Now</BtnLink>
-        </HeroText>
-        <HeroImg src={heroImg} />
-      </Hero>
-      <Body1>
-        <BHeading>What can you do with our LOGO</BHeading>
-        <BContents1>
-          <Uses>
-            Lorem ipsum dolor sit amet consectetur adipisicing
-            elit.Molestiasnatus culpa eligendi inventore
-          </Uses>
-          <Uses>
-            dolorem quas ratione, magni, dolores quod doloremque consequuntur.
-            Amet saepe quis sequi quae, blanditiis voluptas cupiditate
-          </Uses>
-          <Uses>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
-            natus culpa eligendi inventore
-          </Uses>
-        </BContents1>
-      </Body1>
-      <Body2>
-        <BContents2>
-          <Addvert>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
-              dignissimos quasi, inventore impedit repellat porro aperiam
-              veritatis voluptas animi at, dicta praesentium sint? Quo, sint
-              totam. Suscipit obcaecati ipsam laborum?
-            </p>
-            <BtnLink2 to="/signin-up">Try LOGO Now</BtnLink2>
-          </Addvert>
-          <video src={componentVid} autoPlay loop muted />
-        </BContents2>
-      </Body2>
-      <Footer>
-        <NavLogo to="/">
-          <h1>LOGO</h1>
-        </NavLogo>
-        <p>
-          <span>
-            <Copyright />
-          </span>
-          2022, LOGO, BagCampus.in, Inc. All rights reserved
-        </p>
-      </Footer>
+      <Background>
+        <Hero>
+          <HeroText>
+            <HeroMain>Connect anywhere, anytime</HeroMain>
+            <HeroSec>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+              tempora nam deserunt eos, eveniet temporibus. Hic labore officia
+              consectetur quo aliquam culpa voluptatibus dolorem ut perferendis
+              doloremque ratione, eveniet reprehenderit?
+            </HeroSec>
+            <BtnLink to="/signin-up">Try Now</BtnLink>
+          </HeroText>
+          <HeroImg src={heroImg} />
+        </Hero>
+        <Body1>
+          <BHeading>What can you do with our LOGO</BHeading>
+          <BContents1>
+            <Uses>
+              Lorem ipsum dolor sit amet consectetur adipisicing
+              elit.Molestiasnatus culpa eligendi inventore
+            </Uses>
+            <Uses>
+              dolorem quas ratione, magni, dolores quod doloremque consequuntur.
+              Amet saepe quis sequi quae, blanditiis voluptas cupiditate
+            </Uses>
+            <Uses>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+              natus culpa eligendi inventore
+            </Uses>
+          </BContents1>
+        </Body1>
+        <Body2>
+          <BContents2>
+            <Addvert>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta
+                dignissimos quasi, inventore impedit repellat porro aperiam
+                veritatis voluptas animi at, dicta praesentium sint? Quo, sint
+                totam. Suscipit obcaecati ipsam laborum?
+              </p>
+              <BtnLink2 to="/signin-up">Try LOGO Now</BtnLink2>
+            </Addvert>
+            <video src={componentVid} autoPlay loop muted />
+          </BContents2>
+        </Body2>
+        <Footer>
+          <NavLogo to="/">
+            <h1>LOGO</h1>
+          </NavLogo>
+          <p>
+            <span>
+              <Copyright />
+            </span>
+            2022, LOGO, BagCampus.in, Inc. All rights reserved
+          </p>
+        </Footer>
+      </Background>
     </>
   );
 };
+
+const Background = styled.div`
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background: url(${bg});
+    background-size: cover;
+    background-position: top center;
+    opacity: 0.8;
+    z-index: -20;
+  }
+`;
 
 const Hero = styled.div`
   display: flex;
@@ -110,6 +131,7 @@ const HeroImg = styled.img`
   min-width: 10rem;
   height: 50%;
   width: 50%;
+  box-shadow: aliceblue;
 `;
 
 const Body1 = styled.body`
