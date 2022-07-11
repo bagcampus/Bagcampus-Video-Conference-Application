@@ -16,6 +16,29 @@
 		0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
 }
 
+.buttons{
+	display: flex;
+	align-items: center;
+}
+
+.mbuttons{
+	align-items: center;
+}
+
+.mbuttons .normalsignup{
+	text-align: center;
+}
+
+.mbuttons .or{
+	text-align: center;
+	font-style: normal;
+}
+
+.mbuttons .googlebutton{
+	border-radius: 50px;
+	padding-top: 12px;
+}
+
 .left {
 	flex: 2;
 	display: flex;
