@@ -207,7 +207,7 @@
 
   .right {
     flex: 1;
-	height: 50px;
+    height: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -258,7 +258,11 @@
     height: 700px;
     display: flex;
     border-radius: 10px;
-	text-align: center;
+    text-align: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+    margin-right: 10px;
     box-shadow: 0px 3px 3px -2px rgb(0 0 0 / 20%),
       0px 3px 4px 0px rgb(0 0 0 / 14%), 0px 1px 8px 0px rgb(0 0 0 / 12%);
   }
@@ -343,28 +347,26 @@
   }
 
   .buttons {
-	display: flex;
-	align-items: center;
+    display: flex;
+    align-items: center;
   }
-  
-  .mbuttons {
-	align-items: center;
 
+  .mbuttons {
+    align-items: center;
   }
-  
+
   .mbuttons .normalsignup {
-	text-align: center;
+    text-align: center;
   }
-  
+
   .mbuttons .or {
-	text-align: center;
-	font-style: normal;
+    text-align: center;
+    font-style: normal;
   }
-  
+
   .mbuttons .googlebutton {
-	border-radius: 50px;
-	padding-top: 12px;
-	height: 2px;
+    border-radius: 50px;
+    padding-top: 12px;
+    height: 2px;
   }
-  
 }
