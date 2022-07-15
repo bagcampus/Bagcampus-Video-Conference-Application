@@ -11,11 +11,21 @@ const Navbar = ({ toggle }) => {
       </NavLogo>
       <Bars onClick={toggle} />
       <NavMenu>
-        <NavLink to="/home">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/teams">Teams</NavLink>
-        <NavLink to="/blog">Blog</NavLink>
-        <NavLink to="/contact">Contact Us</NavLink>
+        <li>
+          <NavLink to="/home">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/about">About</NavLink>
+        </li>
+        <li>
+          <NavLink to="/teams">Teams</NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog">Blog</NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact">Contact Us</NavLink>
+        </li>
       </NavMenu>
       <NavBtn>
         <NavBtnLink to="/signin-up">Sign In/Up</NavBtnLink>
@@ -25,7 +35,9 @@ const Navbar = ({ toggle }) => {
 };
 
 const Nav = styled.nav`
-  background-color: black;
+  background-color: #fffffd;
+  max-width: 80%;
+  margin: 0 auto;
   height: 80px;
   display: flex;
   justify-content: space-between;
@@ -37,40 +49,49 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled(Link)`
-  color: #fff;
+  color: #696e71;
   display: flex;
   align-items: center;
   text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
   padding: 0 1rem;
+  border-radius: 1rem;
+  margin-right: 10px;
   height: 100%;
   cursor: pointer;
   transition: 0.2s ease-in-out;
   &.active {
-    color: beige;
+    font-size: 20px;
+    color: black;
+    border-color: #696e71;
+    border-style: solid;
+    border-width: 2px;
   }
   &:hover {
-    background-color: rgba(245, 245, 220, 0.4);
     font-size: 20px;
+    border: 2px solid #ff6c02;
     transition: 0.2s ease-in-out;
   }
 `;
 export const NavLogo = styled(Link)`
-  color: #fff;
+  color: #1f276a;
   display: flex;
   align-items: center;
   text-decoration: none;
   padding: 0 1rem;
   height: 100%;
   cursor: pointer;
-  h1 {
-    letter-spacing: 3px;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    color: #ff6c02;
   }
 `;
 
 const Bars = styled(FaBars)`
   display: none;
-  color: #fff;
-  @media screen and (max-width: 768px) {
+  color: #283137;
+  @media screen and (max-width: 1050px) {
     display: block;
     position: absolute;
     top: 0;
@@ -80,11 +101,14 @@ const Bars = styled(FaBars)`
     cursor: pointer;
   }
 `;
-const NavMenu = styled.div`
+const NavMenu = styled.ul`
   display: flex;
   align-items: center;
   margin-right: -24px;
-  @media screen and (max-width: 768px) {
+  li {
+    list-style: none;
+  }
+  @media screen and (max-width: 1050px) {
     display: none;
   }
 `;
@@ -97,8 +121,8 @@ const NavBtn = styled.nav`
   }
 `;
 const NavBtnLink = styled(Link)`
-  border-radius: 4px;
-  background: #256ce1;
+  border-radius: 8px;
+  background: #ff6c02;
   padding: 10px 22px;
   color: #fff;
   border: none;
@@ -108,7 +132,11 @@ const NavBtnLink = styled(Link)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: #ff6c02;
+    border: 2px solid #ff6c02;
+  }
+  @media screen and (max-width: 1050px) {
+    display: none;
   }
 `;
 

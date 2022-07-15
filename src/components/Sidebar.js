@@ -61,7 +61,7 @@ const Icon = styled.div`
   outline: none;
 `;
 const CloseIcon = styled(FaTimes)`
-  color: #fff;
+  color: #283137;
 `;
 
 const SidebarWrapper = styled.div`
